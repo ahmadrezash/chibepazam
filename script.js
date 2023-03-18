@@ -11,6 +11,7 @@ function suggestFood() {
   fetch("foods.json")
     .then(response => response.json())
     .then(foods => {
+
       const randomIndex = Math.floor(Math.random() * foods.length);
       const food = foods[randomIndex];
 
@@ -24,5 +25,19 @@ function suggestFood() {
       foodRecipe.textContent = food.recipe;
 
       foodDetails.classList.remove("d-none");
+
     });
 }
+
+
+fetch("foods.json")
+.then(response => response.json())
+.then(foods => {
+  const table = $('#data-table').DataTable({
+    data: foods,
+    columns: [
+        { data: 'name' },
+        { data: 'ingredients' },
+    ]
+    });
+});

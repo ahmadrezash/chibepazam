@@ -1,35 +1,86 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>چی بپزم؟</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500&display=swap" rel="stylesheet"></head>
+    <meta charset="UTF-8">
+    <title>چی بپزم؟</title>
+    <link rel="stylesheet" href="./libs/bootstrap5/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./libs/datatable1.11.3/style.css">
+</head>
 <body>
-
-  <div class="container mt-5">
-    <h1 class="text-center mb-5">چی بپزم؟</h1>
-
-    <div class="card text-center mt-3">
-      <div class="card-body">
-        <h5 class="card-title mb-4">غذا چی بپزم؟</h5>
-        <button id="suggest-btn" class="btn btn-lg btn-primary">چی بپزم؟</button>
-      </div>
+<div class="container">
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">چی بپزم؟</h1>
     </div>
+    <ul class="nav nav-pills mb-3  justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact
+            </button>
+        </li>
+    </ul>
 
-    <div id="food-details" class="mt-5 d-none">
-      <h3 id="food-name"></h3>
-      <p class="mt-4"><strong>مواد لازم:</strong></p>
-      <ul id="food-ingredients"></ul>
-      <!-- <p class="mt-4"><strong>طرز تهیه:</strong></p> -->
-      <p id="food-recipe"></p>
+    <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="container">
+            <!--            <div class="col-12">-->
+            <div class="card text-center mt-3">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">غذا چی بپزم؟</h5>
+                    <button id="suggest-btn" class="btn btn-lg btn-primary">پیشنهاد بده!</button>
+                </div>
+            </div>
+            <div id="food-details" class="mt-5 card">
+                <div class="card-body">
+                    <h3 id="food-name">[اسم غذا]</h3>
+                    <p class="mt-4"><strong>مواد لازم:</strong></p>
+                    <ul id="food-ingredients"></ul>
+                    <p id="food-recipe"></p>
+                </div>
+            </div>
+            <!--            </div>-->
+        </div>
     </div>
-  </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="container">
+            <!--            <div class="col-3"></div>-->
+            <div class="col-6">
+                <table id="data-table" class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>نام غذا</th>
+                        <th>مواد اولیه اصلی</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">من احمدرضا
+            هستم
+        </div>
+    </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+
+<script src="./libs/bootstrap5/bootstrap.bundle.min.js"></script>
+<script src="./libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="./libs/datatable1.11.3/jquery.dataTables.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

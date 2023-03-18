@@ -2,33 +2,33 @@ body {
     background-color: #F9F9F9;
     font-family: 'Vazirmatn', sans-serif;
 }
-  
-  .card {
+
+.card {
     max-width: 500px;
     margin: 0 auto;
-  }
-  
-  #food-details {
+}
+
+#food-details {
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  #food-name {
+}
+
+#food-name {
     font-size: 2.5rem;
-  }
-  
-  #food-ingredients {
+}
+
+#food-ingredients {
     list-style: none;
     padding-left: 0;
-  }
-  
-  #food-ingredients li {
+}
+
+#food-ingredients li {
     font-size: 1.2rem;
     line-height: 1.5;
-  }
-  
-  #food-recipe {
+}
+
+#food-recipe {
     font-size: 1.2rem;
     line-height: 1.5;
-  }
+}
   
